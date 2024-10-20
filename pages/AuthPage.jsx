@@ -1,6 +1,5 @@
 import { Button, Col, Image, Row, Modal, Form } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
-import axios from "axios";
 import useLocalStorage from "use-local-storage";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../src/components/AuthProvider";
