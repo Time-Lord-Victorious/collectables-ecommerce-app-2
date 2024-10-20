@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './navbar'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AuthPage from "./pages/AuthPage";
+import ProfilePage from "./pages/ProfilePage";
+import { Provider } from "react-redux";
+import store from "./store";
+import { AuthProvider } from "./components/AuthProvider";
 
-function App() {
-
-
+export default function App() {
   return (
-    <>
-      <Navbar></Navbar>
-    </>
-  )
+    <AuthProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/login" element={<AuthPage />} />
+            <Route path="*" element={<AuthPage />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </AuthProvider>
+  );
 }
-
-export default App
