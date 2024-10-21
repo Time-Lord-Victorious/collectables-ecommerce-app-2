@@ -55,11 +55,11 @@ const Navbar = () => {
                             <a className="dropdown-item" href="#">HASBRO</a>
                         </div>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="/cart" className="nav-link">
                             <i className="fas fa-shopping-cart"></i> Cart
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>
