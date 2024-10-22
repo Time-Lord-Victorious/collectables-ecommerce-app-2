@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import storyImage from "../assets/grp pic.jpeg"
 
 const Story = () => {

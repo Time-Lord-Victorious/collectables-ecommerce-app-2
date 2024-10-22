@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import contactImage from "../assets/contact.jpg"
 
 const Contact = () => {
@@ -8,7 +7,7 @@ const Contact = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <img src={contactImage} alt="" height="393px" width="350px" />
+                        <img src={contactImage} alt="" height="450px" width="350px" />
                         <p className="text-right mt-1"><span className="font-weight-bold">Moroboshi Lee</span>, <span
                             className="font-italic">Communications Officer</span></p>
                     </div>
