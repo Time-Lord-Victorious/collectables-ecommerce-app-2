@@ -1,69 +1,51 @@
-import logo from './JS Prod logo transparent.png';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import logo from "../assets/JS.png"
 
 const Navbar = () => {
     return (
-        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-success-subtle">
-            <a className="navbar-brand" href="#">
-                <img src={logo} alt="" height="70" width="70" />
+        <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-success-subtle">
+            <Link className="navbar-brand" href="#"><img src={logo} alt="" height="70px" width="70px"></img>
                 <h2 className="ml-2 d-inline">JS Collectables</h2>
-            </a>
-            <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            </Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
 
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="#ourStory">Our Mission!</a>
+                        <Link className="nav-link" href="#ourStory">Our Mission!</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#contact">Contact us</a>
+                        <Link className="nav-link" href="#contact">Contact us</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#items">Products</a>
+                        <Link className="nav-link" href="#items">Products</Link>
                     </li>
                     <li className="nav-item dropdown">
-                        <a
-                            className="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        >
+                        <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             Brands
-                        </a>
+                        </Link>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="#">BANDAI</a>
+                            <Link className="dropdown-item" href="#">BANDAI</Link>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Hiya Toys</a>
+                            <Link className="dropdown-item" href="#">Hiya Toys</Link>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Playmates</a>
+                            <Link className="dropdown-item" href="#">Playmates</Link>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">McFarlane</a>
+                            <Link className="dropdown-item" href="#">McFarlane</Link>
                             <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">HASBRO</a>
+                            <Link className="dropdown-item" href="#">HASBRO</Link>
                         </div>
                     </li>
-                    {/* <li className="nav-item">
-                        <Link to="/cart" className="nav-link">
-                            <i className="fas fa-shopping-cart"></i> Cart
-                        </Link>
-                    </li> */}
+
                 </ul>
             </div>
         </nav>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar
