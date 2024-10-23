@@ -41,7 +41,6 @@ const Navbar = () => {
                             <Link className="dropdown-item" href="#">HASBRO</Link>
                         </div>
                     </li>
-
                 </ul>
             </div>
         </nav>

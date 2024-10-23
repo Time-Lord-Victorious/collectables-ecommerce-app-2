@@ -188,7 +188,7 @@ export default function Products() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <img src="contact.jpg" alt="" height="393px" length="500px" />
+                        <img src="contact.jpg" alt="" height="393px" width="500px" />
                         <p className="text-right mt-1">
                             <span className="font-weight-bold">Moroboshi Lee</span>,{" "}
                             <span className="font-italic">Communications Officer</span>
@@ -267,6 +267,7 @@ export default function Products() {
                                         data-id={1}
                                         data-name="Godzilla Evolved"
                                         data-price={300}
+                                        onClick={addItem}
                                     >
                                         Add to Cart
                                     </button>

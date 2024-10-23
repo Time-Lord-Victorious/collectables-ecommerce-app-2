@@ -10,8 +10,14 @@ const Home = () => {
         <>
             <Navbar />
             <Carousel />
+            <br />
+            <br />
             <Story />
+            <br />
+            <br />
             <Contact />
+            <br />
+            <br />
             <Products />
         </>
     )
