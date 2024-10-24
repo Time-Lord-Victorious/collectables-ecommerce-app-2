@@ -1,6 +1,11 @@
 import React, { useContext } from 'react';
 import { useCart } from './CartContext';
 
+// Navbar code starts
+import Navbar from "../components/navbar";
+
+// Navbar code ends
+
 const CartSystem = () => {
 
 
@@ -12,7 +17,10 @@ const CartSystem = () => {
 
     return (
         <div>
+            <Navbar />
+            <br></br>
             <h2>Your Cart</h2>
+            <br />
             {cart.products.length === 0 ? (
                 <p>Your cart is empty bro 💀💀💀...</p>
             ) : (
@@ -26,9 +34,9 @@ const CartSystem = () => {
                             </li>
                         )
                     })}
-
+                    <br />
                     <div>
-                        <p>Total price: </p>
+                        <p>Total price (RM): </p>
                         <p>{cart.totalPrice}</p>
                     </div>
                 </ul>

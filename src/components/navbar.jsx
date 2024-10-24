@@ -6,7 +6,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 const Navbar = () => {
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-success-subtle">
-            <Link className="navbar-brand" href="#"><img src={logo} alt="" height="70px" width="70px"></img>
+            <Link className="navbar-brand" href="#"><img src={logo} alt="" height="70px" width="70px" ></img>
                 <h2 className="ml-2 d-inline">JS Collectables</h2>
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
