@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../assets/JS.png"
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
     return (
@@ -42,6 +43,9 @@ const Navbar = () => {
                         </div>
                     </li>
                 </ul>
+                <Link to="/cart" className="nav-link">
+                    <FaShoppingCart size={20} />
+                </Link>
             </div>
         </nav>
     )

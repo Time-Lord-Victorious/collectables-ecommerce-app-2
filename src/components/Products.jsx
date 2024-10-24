@@ -267,7 +267,6 @@ export default function Products() {
                                         data-id={1}
                                         data-name="Godzilla Evolved"
                                         data-price={300}
-                                        onClick={addItem}
                                     >
                                         Add to Cart
                                     </button>

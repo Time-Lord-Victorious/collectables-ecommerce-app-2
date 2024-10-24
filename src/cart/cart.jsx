@@ -1,24 +1,39 @@
-import { useContext } from 'react';
-import { CartContext } from './CartContext';
+import React, { useContext, useState } from 'react';
+import { useCart } from './CartContext';
 
-const Cart = () => {
-    const { cartItems, removeFromCart } = useContext(CartContext);
+const CartSystem = () => {
+    const [totalPrice, setTotalPrice] = useState(0); //initial price is 0
+
+    const { cart, dispatch } = useCart();
+
+    const removeFromCart = (product) => { dispatch({ type: 'REMOVE_FROM_CART', payload: product }) }
 
     return (
-        <div className="container">
-            <h1>Your Cart</h1>
-            <ul className="list-group">
-                {cartItems.map((item) => (
-                    <li key={item.id} className="list-group-item d-flex justify-content-between">
-                        <img src={item.image} alt={item.name} style={{ width: '50px' }} />
-                        <span>{item.name}</span>
-                        <span>RM {item.price}</span>
-                        <button className="btn btn-danger" onClick={() => removeFromCart(item.id)}>Remove</button>
-                    </li>
-                ))}
-            </ul>
+        <div>
+            <h2>Your Cart</h2>
+            {cart.length === 0 ? (
+                <p>Your cart is empty...</p>
+            ) : (
+                <ul>
+                    {cart.map((item) => {
+
+                        return (
+                            <li key={item.id}>
+                                {item.name} - RM {item.price}{' '}
+                                <button onClick={() => removeFromCart(item)}>Delete Item</button>
+                            </li>
+                        )
+                    })}
+
+                    <div>
+                        <p>Total price: </p>
+                        <p></p>
+                    </div>
+                </ul>
+            )}
         </div>
     );
 };
 
-export default Cart;
+export default CartSystem;
+
