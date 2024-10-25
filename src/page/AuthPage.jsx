@@ -1,40 +1,34 @@
 import { Button, Col, Image, Row, Modal, Form } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
-import useLocalStorage from "use-local-storage";
+import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../src/components/AuthProvider";
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { AuthContext } from "../components/Authprovider";
 
 export default function AuthPage() {
     const loginImage = "https://sig1.co/img-twitter-1";
-    const url =
-        "https://auth-back-end-sigmaschooltech.sigma-school-full-stack.repl.co";
 
-    // Possible values: null (no modal shows), "Login", "SignUp"
     const [modalShow, setModalShow] = useState(null);
     const handleShowSignUp = () => setModalShow("SignUp");
     const handleShowLogin = () => setModalShow("Login");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [authToken, setAuthToken] = useLocalStorage("authToken", "");
-
 
     const navigate = useNavigate();
 
     const auth = getAuth();
-
     const { currentUser } = useContext(AuthContext);
 
     useEffect(() => {
-        if (currentUser) navigate("/profile");
-    },
-        [currentUser, navigate]);
+        if (currentUser) {
+            navigate("/profile");
+        }
+    }, [currentUser, navigate]);
 
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
             const res = await createUserWithEmailAndPassword(auth, username, password);
-            console.log(res.user);
+            console.log(res.data);
         } catch (error) {
             console.error(error);
         }
@@ -42,12 +36,22 @@ export default function AuthPage() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await signInWithEmailAndPassword(auth, username, password);
-
-        } catch (error) {
+            await signInWithEmailAndPassword(auth, username, password)
+        }
+        catch (error) {
             console.error(error);
         }
     };
+    const provider = new GoogleAuthProvider();
+    const handleGoogleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            await signInWithPopup(auth, provider);
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
     const handleClose = () => setModalShow(null);
     return (
         <Row>
@@ -67,7 +71,7 @@ export default function AuthPage() {
                     Join Twitter today.
                 </h2>
                 <Col sm={5} className="d-grid gap-2">
-                    <Button className="rounded-pill" variant="outline-dark">
+                    <Button className="rounded-pill" variant="outline-dark" onClick={handleGoogleLogin}>
                         <i className="bi bi-google"></i> Sign up with Google
                     </Button>
                     <Button className="rounded-pill" variant="outline-dark">
@@ -75,7 +79,7 @@ export default function AuthPage() {
                     </Button>
                     <p style={{ textAlign: "center" }}>or</p>
                     <Button className="rounded-pill" onClick={handleShowSignUp}>
-                        Create an account
+                        Create an acc?
                     </Button>
                     <p style={{ fontSize: "12px" }}>
                         By signing up, you agree to the Terms of Service and Privacy Policy,
@@ -83,14 +87,14 @@ export default function AuthPage() {
                     </p>
 
                     <p className="mt-5" style={{ fontWeight: "bold" }}>
-                        Already have an account?
+                        Alr have an acc?
                     </p>
                     <Button
                         className="rounded-pill"
                         variant="outline-primary"
                         onClick={handleShowLogin}
                     >
-                        Sign in
+                        Sign in!
                     </Button>
                 </Col>
                 <Modal
@@ -113,7 +117,7 @@ export default function AuthPage() {
                                 <Form.Control
                                     onChange={(e) => setUsername(e.target.value)}
                                     type="email"
-                                    placeholder="Enter username"
+                                    placeholder="Enter your username buddy"
                                 />
                             </Form.Group>
 
