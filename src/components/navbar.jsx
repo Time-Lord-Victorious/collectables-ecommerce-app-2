@@ -46,6 +46,11 @@ const Navbar = () => {
                 <Link to="/cart" className="nav-link">
                     <FaShoppingCart size={20} />
                 </Link>
+                <IconButton
+                    className="bi bi-door-closed"
+                    text="Logout"
+                    onClick={handleLogout}
+                />
             </div>
         </nav>
     )

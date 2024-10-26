@@ -24,6 +24,9 @@ const Contact = () => {
                         </p>
                         <p>Our tiktok: @jscollectables_officialstore</p>
                         <p>Store address: 03-11, Honda Street, 1954 Monsterland</p>
+                        <br />
+                        <br />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28928.01857158377!2d-71.02059969934388!3d25.00003707674774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89451ab5034cb7ab%3A0xb600ecf3df7aca4d!2sBermuda%20Triangle!5e0!3m2!1sen!2smy!4v1729927694067!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
