@@ -3,9 +3,8 @@ import Home from "./page/Home";
 import CartSystem from "./cart/Cart";
 import { CartProvider } from "./cart/CartContext";
 import AuthPage from "./page/AuthPage";
-import ProfilePage from "./pages/ProfilePage";
+import ProfilePage from "./page/ProfilePage";
 import { Provider } from "react-redux";
-import store from "./store";
 import { AuthProvider } from "./components/AuthProvider";
 
 const router = createBrowserRouter([
