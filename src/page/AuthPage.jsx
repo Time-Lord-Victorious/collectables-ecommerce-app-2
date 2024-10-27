@@ -68,11 +68,11 @@ export default function AuthPage() {
                     style={{ fontSize: 50, color: "dodgerblue" }}
                 ></i>
 
-                <p className="mt-5" style={{ fontSize: 64 }}>
-                    Happening Now
+                <p className="mt-5" style={{ fontSize: 60 }}>
+                    Big discounts happening Now
                 </p>
-                <h2 className="my-5" style={{ fontSize: 31 }}>
-                    Join Twitter today.
+                <h2 className="my-5" style={{ fontSize: 30 }}>
+                    Sign up today.
                 </h2>
                 <Col sm={5} className="d-grid gap-2">
                     <Button
@@ -81,9 +81,6 @@ export default function AuthPage() {
                         onClick={handleGoogleLogin}
                     >
                         <i className="bi bi-google"></i> Sign up with Google
-                    </Button>
-                    <Button className="rounded-pill" variant="outline-dark">
-                        <i className="bi bi-apple"></i> Sign up with Apple
                     </Button>
                     <p style={{ textAlign: "center" }}>or</p>
                     <Button className="rounded-pill" onClick={handleShowSignUp}>
@@ -136,7 +133,7 @@ export default function AuthPage() {
 
                             <p style={{ fontSize: 12 }}>
                                 By signing up, you agree to the Terms of Service and Privacy
-                                Policy, including Cookie Use. SigmaTweets may use your contact
+                                Policy, including Cookie Use. JS Collectables may use your contact
                                 information, including your email address and phone number for
                                 purposes outlined in our Privacy Policy, like keeping your
                                 account secure and personalising our services, including ads.

@@ -9,7 +9,7 @@ import { AuthProvider } from "./components/AuthProvider";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />
   }, {
     path:
