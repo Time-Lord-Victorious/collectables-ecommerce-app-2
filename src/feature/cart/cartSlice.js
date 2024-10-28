@@ -12,15 +12,15 @@ import { createSlice } from "@reduxjs/toolkit";
 //   );
 
 //   export const saveItem = createAsyncThunk(
-//     "posts/savePost",
+//     "cart/saveItem",
 //     async (postContent) => {
 //       const token = localStorage.getItem("authToken");
 //       const decode = jwtDecode(token);
 //       const userId = decode.id;
 
 //       const data = {
-//         title: "post title",
-//         content: postContent,
+//         id: "post title",
+//         : postContent,
 //         user_id: userId,
 //       };
 

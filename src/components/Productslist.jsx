@@ -32,7 +32,7 @@ const Products = () => {
                         Wolverine
                     </button>
                 </div>
-                <div className="flex-grow-1 d-flex justify-content-lg-end">
+                {/* <div className="flex-grow-1 d-flex justify-content-lg-end">
                     <form className="form-inline my-2 my-lg-0 mr-3 mx-3">
                         <input
                             className="form-control mr-2"
@@ -40,10 +40,12 @@ const Products = () => {
                             placeholder="Search our products!"
                             aria-label="Search"
                         />
-                        {/* <button type="button" class="btn btn-outline-success my-2 my-sm-0">Search</button> */}
+                        <button type="button" class="btn btn-outline-success my-2 my-sm-0">Search</button>
                     </form>
-                </div>
+                </div> */}
             </div>
+            <br />
+            <br />
             <div className="row">
                 {products.map((product) => (
                     <div className="col-md-6 col-lg-4 my-2 item ultraman" key={product.id}>
