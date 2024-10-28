@@ -69,7 +69,7 @@ export default function AuthPage() {
                 ></i>
 
                 <p className="mt-5" style={{ fontSize: 60 }}>
-                    Big discounts happening Now
+                    Big discounts happening now mate!!!
                 </p>
                 <h2 className="my-5" style={{ fontSize: 30 }}>
                     Sign up today.
@@ -84,18 +84,18 @@ export default function AuthPage() {
                     </Button>
                     <p style={{ textAlign: "center" }}>or</p>
                     <Button className="rounded-pill" onClick={handleShowSignUp}>
-                        Create an account
+                        Create an acc~
                     </Button>
                     <p style={{ fontSize: "12px" }}> Agree to terms</p>
                     <p className="mt-5" style={{ fontWeight: "bold" }}>
-                        Already have an account?
+                        Already have an acc?
                     </p>
                     <Button
                         className="rounded-pill"
                         variant="outline-primary"
                         onClick={handleShowLogin}
                     >
-                        Sign in
+                        Sign in!
                     </Button>
                 </Col>
                 <Modal

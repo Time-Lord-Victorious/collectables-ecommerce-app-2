@@ -4,11 +4,22 @@ import Contact from "../components/Contact";
 import Story from "../components/Story";
 import Carousel from "../components/Carousel";
 import Products from "../components/Productslist";
+import { getAuth } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../components/AuthProvider";
 
 const Home = () => {
+    const auth = getAuth();
+
+    const navigate = useNavigate();
+    const { currentUser } = useContext(AuthContext);
+
+    if (!currentUser) navigate("/login");
+    const handleLogout = () => auth.signOut();
     return (
         <>
-            <Navbar />
+            <Navbar handleLogout={handleLogout} />
             <Carousel />
             <br />
             <br />

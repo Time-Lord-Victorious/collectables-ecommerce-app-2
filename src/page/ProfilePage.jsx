@@ -4,6 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/AuthProvider";
 import Navbar from "../components/Navbar"
+import ProfileMidBody from "../components/ProfileMidBody";
 
 export default function ProfilePage() {
     const auth = getAuth();
@@ -14,10 +15,9 @@ export default function ProfilePage() {
     const handleLogout = () => auth.signOut();
     return (
         <>
-            <Navbar />
+            <Navbar handleLogout={handleLogout} />
             <Container>
                 <Row>
-                    <ProfileSideBar handleLogout={handleLogout} />
                     <ProfileMidBody />
                 </Row>
             </Container>
