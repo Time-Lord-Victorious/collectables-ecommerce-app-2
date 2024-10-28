@@ -33,7 +33,7 @@ export default function ProfileMidBody() {
             <Row className="justify-content-end">
                 <Col xs="auto">
                     <Button className="rounded-pill mt-2" variant="outline-secondary">
-                        Edit Profile
+                        Edit ur profile bro
                     </Button>
                 </Col>
             </Row>
