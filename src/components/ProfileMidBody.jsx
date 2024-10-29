@@ -30,20 +30,12 @@ export default function ProfileMidBody() {
                     border: "4px solid #F8F9FA",
                 }}
             />
-            <Row className="justify-content-end">
-                <Col xs="auto">
-                    <Button className="rounded-pill mt-2" variant="outline-secondary">
-                        Edit ur profile bro
-                    </Button>
-                </Col>
-            </Row>
             <p
                 className="mt-5"
                 style={{ margin: 0, fontWeight: "bold", fontSize: "15px" }}
             >
-                JS Lee
+                User
             </p>
-            <p style={{ marginBottom: "2px" }}>@js_lee</p>
             <p>Figure collector</p>
         </Col>
     );
