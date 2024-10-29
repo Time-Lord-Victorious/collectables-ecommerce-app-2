@@ -43,7 +43,7 @@ import { createSlice } from "@reduxjs/toolkit";
 //     },
 //   });
 
-//   export default postsSlice.reducer;
+//   export default cartSlice.reducer;
 
 
 
