@@ -19,26 +19,26 @@ import { createSlice } from "@reduxjs/toolkit";
 //       const userId = decode.id;
 
 //       const data = {
-//         id: "post title",
-//         : postContent,
+//         name: "cartName",
+//         price: cartPrice,
 //         user_id: userId,
 //       };
 
-//       const response = await axios.post(`${BASE_URL}/posts`, data);
+//       const response = await axios.post(`${BASE_URL}/cart`, data);
 //       return response.data;
 //     }
 //   );
 
-//   const postsSlice = createSlice({
-//     name: "posts",
-//     initialState: { posts: [], loading: true },
+//   const cartSlice = createSlice({
+//     name: "cart",
+//     initialState: { cart: [], loading: true },
 //     extraReducers: (builder) => {
-//       builder.addCase(fetchPostsByUser.fulfilled, (state, action) => {
+//       builder.addCase(fetchCartByUser.fulfilled, (state, action) => {
 //         state.posts = action.payload;
 //         state.loading = false;
 //       }),
-//         builder.addCase(savePost.fulfilled, (state, action) => {
-//           state.posts = [action.payload, ...state.posts];
+//         builder.addCase(saveCart.fulfilled, (state, action) => {
+//           state.cart = [action.payload, ...state.cart];
 //         });
 //     },
 //   });

@@ -17,9 +17,6 @@ const Products = () => {
             <div className="row justify-content-between">
                 <div className="ml-3">
                     <button type="button" className="btn btn-outline-secondary">
-                        all
-                    </button>
-                    <button type="button" className="btn btn-outline-secondary">
                         Godzilla
                     </button>
                     <button type="button" className="btn btn-outline-secondary">
@@ -68,5 +65,5 @@ const Products = () => {
             </div>
         </div>)
 }
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 export default Products
