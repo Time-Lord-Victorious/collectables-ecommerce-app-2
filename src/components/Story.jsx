@@ -9,7 +9,7 @@ const Story = () => {
                     <div className="col-md-4">
                         <h1>Our Mission</h1>
                         <br />
-                        <p>Hiya, this is JS Lee, CEO of JS Toys! Since young, I really loved collecting figure collectables for my
+                        <p>Hiya, this is JS Lee, CEO of JS Collectables! Since young, I really loved collecting figure collectables for my
                             favourite characters-- no cap.</p>
                         <p>Nowadays, prices for figure collectables are super sky-high that many are struggling to afford at least
                             ONE figure!</p>
