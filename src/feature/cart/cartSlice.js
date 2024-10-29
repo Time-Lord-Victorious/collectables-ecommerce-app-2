@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 // export const fetchCartByUser = createAsyncThunk(
-//     "posts/fetchByUser",
+//     "cart/fetchByUser",
 //     async (userId) => {
 //       const response = await fetch(`${BASE_URL}/cart/user/${userId}`);
 //       return response.json();
