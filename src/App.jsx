@@ -1,6 +1,6 @@
 import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import Home from "./page/Home";
-import CartSystem from "./cart/Cart";
+import CartSystem from "./cart/Cart"
 import { CartProvider } from "./cart/CartContext";
 import AuthPage from "./page/AuthPage";
 import ProfilePage from "./page/ProfilePage";
