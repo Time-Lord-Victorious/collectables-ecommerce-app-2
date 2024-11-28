@@ -5,7 +5,6 @@ import { useCart } from './CartContext';
 import Navbar from "../components/navbar";
 
 // Navbar code ends
-const BASE_URL = "https://81cbb5a9-d419-4981-a914-31087e169667-00-2c59gjl1023od.pike.replit.dev/"
 
 const CartSystem = () => {
 
