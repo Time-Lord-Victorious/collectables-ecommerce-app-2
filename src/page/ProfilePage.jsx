@@ -3,8 +3,9 @@ import { useContext } from "react";
 import { Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../components/AuthProvider";
-import Navbar from "../components/Navbar"
+
 import ProfileMidBody from "../components/ProfileMidBody";
+import Navbar from "../components/navbar";
 
 export default function ProfilePage() {
     const auth = getAuth();
