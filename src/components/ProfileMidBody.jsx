@@ -1,4 +1,4 @@
-import { Button, Col, Image, Nav, Row, Spinner } from "react-bootstrap";
+import { Button, Col, Image, Nav, Row, Spinner, Container } from "react-bootstrap";
 
 export default function ProfileMidBody() {
     const url = "https://sm.ign.com/t/ign_ap/feature/w/what-the-h/what-the-hell-is-godzillas-problem-the-greatest-injustice-of_uraj.1280.jpg";
@@ -15,28 +15,30 @@ export default function ProfileMidBody() {
     // }, [dispatch]);
 
     return (
-        <Col sm={6} className="bg-light" style={{ border: "1px solid lightgrey" }}>
-            <Image src={url} fluid />
-            <br />
+        <Container>
+            <Col sm={6} className="bg-light" style={{ border: "1px solid lightgrey" }}>
+                <Image src={url} fluid />
+                <br />
 
-            <Image
-                src={pic}
-                roundedCircle
-                style={{
-                    position: "absolute",
-                    top: "140px",
-                    marginLeft: 15,
-                    width: 150,
-                    border: "4px solid #F8F9FA",
-                }}
-            />
-            <p
-                className="mt-5"
-                style={{ margin: 0, fontWeight: "bold", fontSize: "15px" }}
-            >
-                User
-            </p>
-            <p>Figure collector</p>
-        </Col>
+                <Image
+                    src={pic}
+                    roundedCircle
+                    style={{
+                        position: "absolute",
+                        top: "140px",
+                        marginLeft: 15,
+                        width: 150,
+                        border: "4px solid #F8F9FA",
+                    }}
+                />
+                <p
+                    className="mt-5"
+                    style={{ margin: 0, fontWeight: "bold", fontSize: "15px" }}
+                >
+                    User
+                </p>
+                <p>Figure collector</p>
+            </Col>
+        </Container>
     );
 }

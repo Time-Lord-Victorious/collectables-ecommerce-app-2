@@ -8,6 +8,7 @@ import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../components/AuthProvider";
+import { Container } from "react-bootstrap";
 
 const Home = () => {
     const auth = getAuth();
@@ -20,16 +21,19 @@ const Home = () => {
     return (
         <>
             <Navbar handleLogout={handleLogout} />
-            <Carousel />
-            <br />
-            <br />
-            <Story />
-            <br />
-            <br />
-            <Contact />
-            <br />
-            <br />
-            <Products />
+            <Container>
+
+                <Carousel />
+                <br />
+                <br />
+                <Story />
+                <br />
+                <br />
+                <Contact />
+                <br />
+                <br />
+                <Products />
+            </Container>
         </>
     )
 }

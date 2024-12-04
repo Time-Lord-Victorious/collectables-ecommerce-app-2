@@ -1,5 +1,6 @@
 import React from 'react'
 import storyImage from "../assets/grp pic.jpeg"
+import { Row } from 'react-bootstrap'
 
 const Story = () => {
     return (
@@ -19,7 +20,8 @@ const Story = () => {
 
                     </div>
                     <div className="col-md-8">
-                        <img src={storyImage} alt="" height="393px" width="410px" />
+                        <Row><img src={storyImage} alt="" height={'auto'} width={'100%'} /></Row>
+
                         <p className="text-right mt-1"><span className="font-weight-bold">JS Lee</span>, <span className="font-italic">Founder &
                             CEO bro!</span></p>
                     </div>

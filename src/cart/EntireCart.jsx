@@ -1,5 +1,9 @@
 import React, { useContext } from 'react';
 import { useCart } from './CartContext';
+import { Container } from 'react-bootstrap';
+import { getAuth } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../components/AuthProvider";
 
 // Navbar code starts
 import Navbar from "../components/navbar";
@@ -16,32 +20,46 @@ const CartSystem = () => {
 
     console.log(cart)
 
+    //login button code
+
+    const auth = getAuth();
+
+
+    const navigate = useNavigate();
+    const { currentUser } = useContext(AuthContext);
+
+    if (!currentUser) navigate("/login");
+    const handleLogout = () => auth.signOut();
+
     return (
         <div>
-            <Navbar />
-            <br></br>
-            <h2>Your Cart</h2>
-            <br />
-            {cart.products.length === 0 ? (
-                <p>Your cart is empty bro 💀💀💀...</p>
-            ) : (
-                <ul>
-                    {cart.products.map((item, index) => {
+            <Navbar handleLogout={handleLogout} />
+            <Container>
+                <br></br>
+                <h2>Your Cart</h2>
+                <br />
+                {cart.products.length === 0 ? (
+                    <p>Your cart is empty bro 💀💀💀...</p>
+                ) : (
+                    <ul>
+                        {cart.products.map((item, index) => {
 
-                        return (
-                            <li key={item.id}>
-                                {item.name} - RM {item.price}{' '}
-                                <button onClick={() => removeFromCart(index)}>Delete Item</button>
-                            </li>
-                        )
-                    })}
-                    <br />
-                    <div>
-                        <p>Total price (RM): </p>
-                        <p>{cart.totalPrice}</p>
-                    </div>
-                </ul>
-            )}
+                            return (
+                                <li key={item.id}>
+                                    {item.name} - RM {item.price}{' '}
+                                    <button onClick={() => removeFromCart(index)}>Delete Item</button>
+                                </li>
+                            )
+                        })}
+                        <br />
+                        <div>
+                            <p>Total price (RM): </p>
+                            <p>{cart.totalPrice}</p>
+                        </div>
+                    </ul>
+                )}
+
+            </Container>
         </div>
     );
 };
