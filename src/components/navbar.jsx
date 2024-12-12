@@ -1,60 +1,46 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from "../assets/JS.png"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import BootstrapNavbar from 'react-bootstrap/Navbar';
 import { FaShoppingCart } from 'react-icons/fa';
 import IconButton from "./IconButton";
+import logo from "../assets/JS.png";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ handleLogout }) => {
     return (
-        <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-success-subtle">
-            <Link className="navbar-brand" to="/home"><img src={logo} alt="" height="70px" width="70px" ></img>
-                <h2 className="ml-2 d-inline">JS Collectables</h2>
-            </Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
+        <BootstrapNavbar expand="lg" className="navbar-light bg-success-subtle">
+            <Container>
 
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <Link className="nav-link" href="#ourStory">Our Mission!</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" href="#contact">Contact us</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" href="#items">Products</Link>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Brands
+                <BootstrapNavbar.Brand >
+                    <Link to="/home">
+                        <img
+                            alt=""
+                            src={logo}
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />{' '}JS Collectables</Link></BootstrapNavbar.Brand>
+                <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+                <BootstrapNavbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#ourStory">Our Mission</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link href="#items">Products</Nav.Link>
+                        <Nav.Link> <Link to="/cart">
+                            <FaShoppingCart size={20} />
                         </Link>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link className="dropdown-item" href="#">BANDAI</Link>
-                            <div className="dropdown-divider"></div>
-                            <Link className="dropdown-item" href="#">Hiya Toys</Link>
-                            <div className="dropdown-divider"></div>
-                            <Link className="dropdown-item" href="#">Playmates</Link>
-                            <div className="dropdown-divider"></div>
-                            <Link className="dropdown-item" href="#">McFarlane</Link>
-                            <div className="dropdown-divider"></div>
-                            <Link className="dropdown-item" href="#">HASBRO</Link>
-                        </div>
-                    </li>
-                </ul>
-                <Link to="/cart" className="nav-link">
-                    <FaShoppingCart size={20} />
-                </Link>
-                <IconButton
-                    className="bi bi-door-closed"
-                    text="Logout"
-                    onClick={handleLogout}
-                />
-            </div>
-        </nav>
-    )
+                        </Nav.Link>
+                        <IconButton
+                            className="bi bi-door-closed"
+                            text="Logout"
+                            onClick={handleLogout}
+                        />
+
+                    </Nav>
+                </BootstrapNavbar.Collapse>
+            </Container>
+        </BootstrapNavbar>
+    );
 }
 
-export default Navbar
+export default Navbar;
