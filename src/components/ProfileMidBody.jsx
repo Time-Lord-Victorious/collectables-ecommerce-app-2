@@ -16,21 +16,23 @@ export default function ProfileMidBody() {
 
     return (
         <Container>
-            <Col sm={6} className="bg-light" style={{ border: "1px solid lightgrey" }}>
-                <Image src={url} fluid />
-                <br />
+            <Col sm={6} className="bg-light !relative" style={{ border: "1px solid lightgrey", position: "relative" }}>
+                <div className="relative">
+                    <Image src={url} fluid />
+                    <br />
 
-                <Image
-                    src={pic}
-                    roundedCircle
-                    style={{
-                        position: "absolute",
-                        top: "140px",
-                        marginLeft: 15,
-                        width: 150,
-                        border: "4px solid #F8F9FA",
-                    }}
-                />
+                    <Image
+                        src={pic}
+                        roundedCircle
+                        style={{
+                            position: "absolute",
+                            top: "100px",
+                            marginLeft: 15,
+                            width: 150,
+                            border: "4px solid #F8F9FA",
+                        }}
+                    />
+                </div>
                 <p
                     className="mt-5"
                     style={{ margin: 0, fontWeight: "bold", fontSize: "15px" }}

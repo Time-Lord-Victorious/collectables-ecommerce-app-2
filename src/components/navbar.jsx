@@ -7,7 +7,12 @@ import logo from "../assets/JS.png";
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ handleLogout }) => {
+    const currentPath = window.location.href
+    const isProfilePage = currentPath.includes('/profile')
+    console.log(isProfilePage)
     return (
+
+
         <BootstrapNavbar expand="lg" className="navbar-light bg-success-subtle">
             <Container>
 
@@ -23,9 +28,29 @@ const Navbar = ({ handleLogout }) => {
                 <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
                 <BootstrapNavbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#ourStory">Our Mission</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
-                        <Nav.Link href="#items">Products</Nav.Link>
+                        <Nav.Link><Link to="/profile">Profile</Link></Nav.Link>
+
+                        {!isProfilePage &&
+
+                            <>
+                                <Nav.Link href="#ourStory">
+
+                                    Our Mission
+
+                                </Nav.Link>
+                                <Nav.Link href="#contact">
+
+                                    Contact
+
+                                </Nav.Link>
+                                <Nav.Link href="#items">
+
+                                    Products
+
+                                </Nav.Link>
+                            </>
+                        }
+
                         <Nav.Link> <Link to="/cart">
                             <FaShoppingCart size={20} />
                         </Link>
